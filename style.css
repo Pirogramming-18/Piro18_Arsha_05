@@ -4,23 +4,20 @@
 	box-sizing: border-box;
 }
 
-/* header {
-	position: sticky;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-
-section {
+#hero {
 	padding: 60px 0;
 	overflow: hidden;
-} */
+}
 
 #header-bar {
 	height: 1.8rem;
 	background: #023b6d;
 	display: flex;
 	align-items: center;
+	position: sticky;
+	left: 0;
+	right: 0;
+	top: 0;
 }
 
 #logo {
@@ -146,18 +143,29 @@ section {
 
 #main-container {
 	padding-top: 4.5rem;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 5rem;
+	margin-left: 5rem;
+	display: flex;
 }
 
-#introduction {
-	--bs-gutter-x: 1.5rem;
-	--bs-gutter-y: 0;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: calc(-1 * var(--bs-gutter-y));
-	margin-right: calc(-0.5 * var(--bs-gutter-x));
-	margin-left: calc(-0.5 * var(--bs-gutter-x));
+#intro-left {
+	width: 50%;
+}
+
+#intro-right {
+	width: 50%;
+}
+#hero h1 {
+	margin: 0 0 10px 0;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 56px;
+	color: #fff;
+}
+#hero h2 {
+	color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 50px;
+	font-size: 24px;
 }
 
 #clients {
