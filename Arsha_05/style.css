@@ -10,7 +10,7 @@ html {
 #services {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   background-color: aqua;
 }
 
@@ -19,7 +19,29 @@ html {
   flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  align-items: center;
 }
 
-#services-title {
+#services-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.services-grid-contents {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.services-grid-icone {
+  padding-bottom: 2rem;
+}
+.services-grid-title {
+  padding-bottom: 1rem;
 }
