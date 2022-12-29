@@ -7,19 +7,19 @@ html {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.services {
+#services {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
   background-color: aqua;
 }
 
-.services-main {
+#services-main {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.services-title {
+#services-title {
 }
