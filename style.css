@@ -656,21 +656,29 @@
   text-align: center;
 }
 
-/* grid로 하니까 창 크기 변화에 따라 요소 배열이 안바뀜
-근데 또 flex를 쓰니까 계속 한줄로 정렬됨..ㅠㅠ */
 #services-grid {
   display: flex;
   padding: 0 2.5rem;
   padding-bottom: 60px;
   padding-top: 1rem;
 }
-/* display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  padding: 0 2.5rem;
-  padding-bottom: 60px;
-  padding-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+
+@keyframes services-hb {
+  from{
+    transform: translateY(1);
+  }
+  to{
+    transform: translateY(-1rem);
+  }
+}
+
+.services-grid-contents:hover .services-grid-title{
+  color:#47b3e1;
+}
+
+.services-grid-contents:hover{
+  animation: services-hb 0.3s both;
+}
 
   .services-grid-contents {
     display: flex;
@@ -681,6 +689,7 @@
     transition: all ease-in-out 0.4s;
     background: #fff;
     margin: 1rem;
+
   }
 
 .services-grid-contents :first-child {
@@ -838,14 +847,6 @@
   color: #fff;
   font-weight: 500;
 }
-/* 
-#portfolio-photo {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  margin: 2rem;
-} */
-
 
 #portfolio-photo {
   display: flex;
@@ -864,14 +865,6 @@
   flex-direction: column;
 }
 
-
-
-/* 포토 클래스들 
-*
-*
-*
-*
-*/
 .portfolio-photo-box{
   display: flex;
   position: relative;
@@ -922,12 +915,6 @@
   color:white;
 }
 
-/* 여기까지 */
-
-
-
-
-
 @media only screen and (max-width: 1200px) {
   #services-grid {
     flex-wrap: wrap;
@@ -937,7 +924,6 @@
     width: 40%;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   #clients-container {
