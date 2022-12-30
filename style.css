@@ -2,19 +2,51 @@
 
 @keyframes up-down {
   from {
-    transform: translateY(25px);
+    transform: translateY(1.5rem);
   }
   25% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625em);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(0.625em);
   }
   75% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625em);
   }
   to {
-    transform: translateY(25px);
+    transform: translateY(1.51rem);
+  }
+}
+
+#intro-left {
+  width: 50%;
+  padding-top: 3rem;
+}
+
+#main-container {
+  padding-top: 4.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 991px) {
+  #main-container {
+    padding-top: 4.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  #intro-left {
+    width: 100%;
+    padding-top: 5rem;
+    text-align: center;
   }
 }
 * {
@@ -22,12 +54,12 @@
 }
 
 #hero {
-  padding: 60px 0;
+  padding: 3.75rem 0;
   overflow: hidden;
 }
 
 #header-bar {
-  height: 1.8rem;
+  height: 2rem;
   background: #023b6d;
   display: flex;
   align-items: center;
@@ -35,27 +67,32 @@
   left: 0;
   right: 0;
   top: 0;
+  overflow: hidden;
+  z-index: 1003;
+}
+
+@media screen and (max-width: 1024px) {
+  #preview-device {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    display: none;
+  }
 }
 
 #logo {
   padding-left: 0.625em;
+  margin-top: 3px;
 }
 
 #logo img {
   height: 1.56rem;
 }
 #preview-device {
-  margin-top: 0.32rem;
-  margin-right: 11rem;
-}
-#preview-device ul {
-  margin: 0 0 0 2rem;
-  padding: 0;
-  list-style: none;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  margin: 0.32rem 18rem 0 1rem;
 }
 
 #preview-device li {
@@ -81,27 +118,70 @@
   color: white;
 }
 
+#current-template a:nth-child(2) {
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+#current-template a:nth-child(1) {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+#current-template a:nth-child(3) {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+#current-template a:nth-child(1):hover {
+  color: white;
+}
+#current-template a:nth-child(3):hover {
+  color: white;
+}
+
 #navigate {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
+
+#navigate i {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  padding: 0 0.3rem 0 0;
+}
+#navigate i:hover {
+  color: white;
+}
+
 #navigate #download {
   background: #00a6eb;
   color: #fff;
   font-size: 0.81rem;
   padding: 0 1em;
-  height: 2.2em;
+  height: 2.4em;
   font-weight: 700;
   text-transform: uppercase;
   margin-left: 0.94rem;
   white-space: nowrap;
 }
+#navigate #download i {
+  color: white;
+}
+
+#navigate #download:hover {
+  background: #47b3e1;
+}
+
 #navigate a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 #fixed-top {
@@ -111,17 +191,13 @@
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
-}
-
-#fixed-top {
 }
 
 #top-container {
-  padding: 0.94rem;
   display: flex !important;
   justify-content: space-evenly !important;
   align-items: center !important;
+  padding: 0.94rem 0 0 0;
 }
 
 #top-container #Arsha-logo {
@@ -147,40 +223,66 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-size: 15px;
+  padding: 0.6rem 0 0.6rem 1.9rem;
+  font-size: 0.975rem;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
 }
 
+#navbar a:hover {
+  color: #47b2e4;
+}
+
 #navbar #sign-button {
-  border: 2px solid #47b2e4;
-  border-radius: 50px;
-  padding: 8px 20px;
-  margin-left: 30px;
+  border: 0.1rem solid #47b2e4;
+  border-radius: 3.1rem;
+  padding: 0.5rem 1.25rem;
+  margin-left: 1.87rem;
+}
+
+#navbar #sign-button:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+
+#navbar-menu {
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 991px) {
+  #navbar {
+    display: none;
+  }
+  #Arsha-logo {
+    position: absolute;
+    top: 1rem;
+    left: 2.4rem;
+  }
+  #navbar-menu {
+    display: block;
+    position: absolute;
+    top: 1.9rem;
+    right: 4.2rem;
+  }
+  #top-container #Arsha-logo {
+    margin-left: 2rem;
+  }
 }
 
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 80%;
   background: #37517e;
   display: flex;
-  align-items: center;
-}
-
-#main-container {
-  padding-top: 4.5rem;
-  margin-right: 10rem;
-  margin-left: 10rem;
-  display: flex;
   justify-content: center;
-}
-
-#intro-left {
-  width: 50%;
-  padding-top: 80px;
+  align-items: center;
 }
 
 #intro-right {
@@ -197,33 +299,69 @@
 }
 
 #intro-left #intro-button {
-  border: 2px solid #47b2e4;
-  border-radius: 50px;
+  border: 0.125rem solid #47b2e4;
+  border-radius: 3.1rem;
   background-color: #47b2e4;
-  padding: 8px 20px;
-  margin-right: 30px;
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.57rem;
+}
+
+#intro-left #intro-button:hover {
+  background-color: #4398bf;
+  border: 0.125rem solid #4398bf;
 }
 
 #intro-left a {
-  padding: 10px 0 10px 3px;
-  font-size: 15px;
+  padding: 0.6rem 0 0.6rem 1.9rem;
+  font-size: 0.975rem;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
 }
 
+#intro-left i {
+  transition: 0.3s;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+#intro-left i:hover {
+  color: #4398bf;
+}
+
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
+  margin: 0 0 0.62rem 0;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #intro-right {
+    width: 70%;
+  }
+}
+
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 58px;
-  font-size: 24px;
+  margin-bottom: 3.6rem;
+  font-size: 1.5rem;
+}
+
+#color-change {
+  position: fixed;
+  background: #37517e;
+  opacity: 0.9;
+  padding: 3rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 996;
 }
 
 #clients {
@@ -251,6 +389,12 @@
   padding: 15px 0;
   height: auto;
   filter: grayscale(100);
+  transition: all 0.3s linear;
+}
+
+.clients-list-img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }
 
 #about {
@@ -271,7 +415,7 @@
 #about-title div {
   margin-top: 2rem;
   width: 10%;
-  border-bottom: 1px solid black;
+  border-bottom: 0.1px solid #868686;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,7 +423,7 @@
 
 #about-title div span {
   width: 40%;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid #47b2e4;
 }
 
 #about-title h2 {
@@ -318,13 +462,19 @@
   color: #444444;
 }
 
-#about-content-right button {
+#about-btn {
   margin-top: 2rem;
   background-color: white;
   padding: 0.6rem 2rem;
   border: 1px solid #47b2e4;
   color: #47b2e4;
   border-radius: 5px;
+  transition: all 0.1s linear;
+}
+
+#about-btn:hover {
+  background-color: #47b2e4;
+  color: white;
 }
 
 .about-i {
@@ -346,6 +496,10 @@
 #whyus-content h2 {
   font-size: 1.8rem;
   color: #37517e;
+}
+
+.whyus-info:hover {
+  color: #47b2e4;
 }
 
 #whyus-span {
@@ -735,8 +889,93 @@
   display: flex;
 }
 
-.portfolio-photo-photo{
-  width: 300px;
+.portfolio-photo-1 {
+  display: flexbox;
+  width: 10rem;
+  margin: 0.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  #clients-container {
+    flex-wrap: wrap;
+  }
+
+  .clients-list-items {
+    width: calc(100% / 3);
+    flex: 0 0 auto;
+  }
+
+  #about-content {
+    flex-wrap: wrap;
+    padding: 2rem 6rem;
+  }
+
+  #about-content-left {
+    width: 100%;
+  }
+
+  #about-content-right {
+    width: 100%;
+    padding-top: 1rem;
+    margin: 0;
+  }
+
+  #whyus {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  #whyus-content {
+    width: 100%;
+    padding: 0;
+  }
+  #whyus-img {
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 2rem;
+  }
+
+  #skill {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #skill-img {
+    width: 100%;
+    min-height: 400px;
+  }
+  #skill-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #clients-container {
+    flex-wrap: wrap;
+  }
+
+  .clients-list-items {
+    width: 50%;
+    flex: 0 0 auto;
+  }
+
+  #about {
+    padding: 0;
+  }
+  #about-content {
+    padding: 3rem;
+  }
+
+  #whyus {
+    padding: 1rem;
+  }
+
+  #skill {
+    padding: 1rem;
+  }
+  #skill-content {
+    padding: 1rem;
+  }
 }
 
 .portfolio-photo-info-text{
