@@ -1244,6 +1244,13 @@ label {
   color: #6182ba;
 }
 
+.address:hover i,
+.email:hover i,
+.phone:hover i {
+  background: #209dd8;
+  color: #fff;
+}
+
 .contact-title {
   font-size: 32px;
   font-weight: bold;
