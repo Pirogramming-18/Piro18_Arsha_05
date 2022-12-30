@@ -18,6 +18,19 @@
   }
 }
 
+@keyframes up {
+  from {
+    transform: translateY(1);
+  }
+  to {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.team-content-container:hover {
+  animation: up 0.5s both;
+}
+
 #intro-left {
   width: 50%;
   padding-top: 3rem;
@@ -242,6 +255,10 @@ label {
 
 #navbar a:hover {
   color: #47b2e4;
+}
+
+a:hover i {
+  color: white;
 }
 
 #navbar #sign-button {
@@ -742,6 +759,7 @@ label {
 
 .team-content-social {
   display: flex;
+  flex-direction: row;
 }
 
 .team-content-social a {
@@ -754,15 +772,21 @@ label {
   background-color: #eff2f8;
   background-repeat: no-repeat;
   text-decoration-line: none;
+  transition: 0.3s;
 }
 
 .team-content-social a i {
   color: #37517e;
   font-size: 1rem;
   margin: 0 0.2rem;
+  transition: 0.3s;
 }
 #team-for-hover {
   transition: ease-in-out 0.3s;
+}
+
+.team-content-social a:hover {
+  background-color: #47b2e4;
 }
 
 #team-for-hover:hover {
@@ -1149,6 +1173,19 @@ label {
   margin-right: 0.5rem;
 }
 
+#faq-list-set {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2%;
+}
+
+#faq-list-set :hover {
+  color: #47b2e4;
+}
+
 #footer-newsletters {
   display: flex;
   flex-direction: column;
@@ -1321,6 +1358,8 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: 0.3px solid black;
+  border-radius: 5px;
 }
 .footer-lastline form input[type="email"] {
   border: 0;
@@ -1391,7 +1430,6 @@ textarea {
 .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #47b2e4;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1485,7 +1523,18 @@ textarea {
 #contact-button button {
   color: white;
 }
+#contact-button button:hover {
+  background: #209dd8;
+}
 
+#contact-button button {
+  background: #47b2e4;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
 .contact-name,
 .contact-email {
   width: 48%;
@@ -1646,6 +1695,49 @@ textarea {
   background-color: #47b2e4;
   color: #fff;
   font-weight: 500;
+}
+
+.twitter:hover i,
+.facebook:hover i,
+.instagram:hover i,
+.google-plus:hover i,
+.linkedin:hover i {
+  font-size: 18px;
+  display: inline-block;
+  background: #209dd8;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.twitter i,
+.facebook i,
+.instagram i,
+.google-plus i,
+.linkedin i {
+  background-color: #47b2e4;
+
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.credits a {
+  color: #47b2e4;
+  text-decoration: none;
 }
 
 /* 여기까지 */
