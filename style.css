@@ -684,13 +684,33 @@
   color: #fff;
   font-weight: 500;
 }
-
+/* 
 #portfolio-photo {
   display: inline-block;
   height: 100%;
   width: 100%;
   margin: 2rem;
+} */
+
+
+#portfolio-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+.portfolio-photo-photo {
+  width: 100%;
+  
+}
+
+.portfolio-photo-group{
+  width: 30%; 
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 /* 포토 클래스들 
 *
@@ -698,45 +718,32 @@
 *
 *
 */
-
-.portfolio-photos {
-  /* position: relative; */
-  display: flex;
-  /* flex-direction: column;
-  align-items: center; */
-  flex-wrap: wrap;
-  margin-left: 2rem;
-}
-
-.portfolio-photo-photo {
-  width: 33%;
-}
-
 .portfolio-photo-box{
-  display: inline-block;
+  display: flex;
   position: relative;
-
+  margin-bottom: 3rem;
 }
 
 .portfolio-info{
   position: absolute;
   width: 100%;
   background-color: rgba(55, 81, 126, 0.8);
-  bottom:0;
+  bottom: 0;
   transition: all 0.3s;
-  padding: 10px 15px;
+  padding: 0 0.4rem;
   justify-content: space-between;
   align-items: center;
   display: none;
   height: 60px;
+
 }
 
 .portfolio-photo-box:hover div{
   display: flex;
 }
 
-.portfolio-photo-photo{
-  width: 300px;
+.portfolio-photo-box:hover .portfolio-info{
+  display: flex;
 }
 
 .portfolio-photo-info-text{
@@ -763,10 +770,8 @@
 
 /* 여기까지 */
 
-#portfolio-photos1{
-  display: flex;
-  flex-direction: column;
-}
+
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -776,5 +781,41 @@
   }
   .services-grid-contents {
     width: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #clients-container {
+    flex-wrap: wrap;
+  }
+
+  .clients-list-items {
+    width: 50%;
+    flex: 0 0 auto;
+  }
+
+  #about {
+    padding: 0;
+  }
+  #about-content {
+    padding: 3rem;
+  }
+
+  #whyus {
+    padding: 1rem;
+  }
+
+  #skill {
+    padding: 1rem;
+  }
+  #skill-content {
+    padding: 1rem;
+  }
+  #portfolio-photo {
+    flex-wrap: wrap;
+  }
+  .portfolio-photo-group {
+    width: 100%;
   }
 }
